@@ -10,9 +10,7 @@ class Home extends BaseController
 		$data = [
 			'title' => 'Test | CI4'
 		];
-		echo view('layout/header', $data);
-		echo view('pages/home');
-		echo view('layout/footer');
+		return view('pages/home', $data);
 	}
 
 	//--------------------------------------------------------------------
