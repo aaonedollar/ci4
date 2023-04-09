@@ -10,7 +10,7 @@ class Home extends BaseController
 		$data = [
 			'title' => 'Test | CI4'
 		];
-		return view('pages/home', $data);
+		return view('komik/index', $data);
 	}
 
 	//--------------------------------------------------------------------
