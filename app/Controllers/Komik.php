@@ -6,11 +6,19 @@ use App\Models\KomikModel;
 
 class Komik extends BaseController
 {
+
+    protected $komikmodel;
+    public function __construct()
+    {
+        $this->komikmodel = new KomikModel();
+    }
+
     public function index()
     {
-
+        $komik = $this->komikmodel->findAll();
         $data = [
-            'title' => 'Daftar Komik'
+            'title' => 'Daftar Komik',
+            'komik' => $komik
         ];
 
         /* contoh manual
@@ -25,12 +33,6 @@ class Komik extends BaseController
         // contoh namespace path ke Models  /  GANTINYA pakai use diatas 
 
         // $komikmodel = \App\Models\KomikModel();
-
-        $komikmodel = new KomikModel();
-        $komik = $komikmodel->findAll();
-
-        dd($komik);
-
 
         return view('komik/index', $data);
     }

@@ -14,20 +14,25 @@
                     <th>Aksi</th>
                 </thead>
                 <tbody>
-                    <tr class="align-items-center tr">
-                        <td>
-                            1
-                        </td>
-                        <td>
-                            <img src="/images/naruto.jpg" alt="" style="width:50px">
-                        </td>
-                        <td>
-                            Naruto
-                        </td>
-                        <td>
-                            <button class="btn btn-success">Detail</button>
-                        </td>
-                    </tr>
+                    <?php $i = 1; ?>
+                    <?php foreach ($komik as $row) : ?>
+
+                        <tr class="align-items-center tr">
+                            <td>
+
+                                <?= $i++; ?>
+                            </td>
+                            <td>
+                                <img src="/images/<?= $row['sampul'] ?>" alt="" style="width:50px">
+                            </td>
+                            <td>
+                                <?= $row['judul']; ?>
+                            </td>
+                            <td>
+                                <button class="btn btn-success">Detail</button>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
                 </tbody>
             </table>
 
