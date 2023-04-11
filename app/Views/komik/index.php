@@ -23,13 +23,13 @@
                                 <?= $i++; ?>
                             </td>
                             <td>
-                                <img src="/images/<?= $row['sampul'] ?>" alt="" style="width:50px">
+                                <img src="/images/<?= $row['sampul']; ?>" alt="" style="width:50px">
                             </td>
                             <td>
                                 <?= $row['judul']; ?>
                             </td>
                             <td>
-                                <button class="btn btn-success">Detail</button>
+                                <a href="/komik/<?= $row['slug']; ?>" class="btn btn-success">Detail</a>
                             </td>
                         </tr>
                     <?php endforeach; ?>

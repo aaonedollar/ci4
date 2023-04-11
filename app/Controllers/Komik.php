@@ -36,4 +36,9 @@ class Komik extends BaseController
 
         return view('komik/index', $data);
     }
+
+
+    public function detail()
+    {
+    }
 }

@@ -36,4 +36,20 @@ class Home extends BaseController
 
 		return view('komik/index', $data);
 	}
+
+
+	public function detail($slug)
+	{
+
+
+		$detail = $this->komikmodel->where(['slug' => $slug])->first();
+
+
+		$data = [
+			'title' => $slug,
+			'dt' => $detail
+		];
+
+		return view('komik/detail', $data);
+	}
 }
