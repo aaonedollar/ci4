@@ -15,10 +15,10 @@ class Home extends BaseController
 
 	public function index()
 	{
-		$komik = $this->komikmodel->findAll();
+		// $komik = $this->komikmodel->findAll();
 		$data = [
 			'title' => 'Daftar Komik',
-			'komik' => $komik
+			'komik' => $this->komikmodel->getKomik()
 		];
 
 		/* contoh manual
@@ -41,13 +41,9 @@ class Home extends BaseController
 	public function detail($slug)
 	{
 
-
-		$detail = $this->komikmodel->where(['slug' => $slug])->first();
-
-
 		$data = [
-			'title' => $slug,
-			'dt' => $detail
+			'title' => 'komik',
+			'd' => $this->komikmodel->getKomik($slug)
 		];
 
 		return view('komik/detail', $data);
