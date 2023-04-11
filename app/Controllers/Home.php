@@ -48,4 +48,14 @@ class Home extends BaseController
 
 		return view('komik/detail', $data);
 	}
+
+
+	public function create()
+	{
+		$data = [
+			'title' => 'create'
+		];
+
+		return view('komik/create', $data);
+	}
 }

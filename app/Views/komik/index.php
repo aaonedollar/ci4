@@ -2,9 +2,14 @@
 
 <?= $this->section('content'); ?>
 
-<div class="container">
+<div class="container mt-5">
     <div class="row">
         <div class="col">
+
+            <div class="row d-flex justify-content-between">
+                <h3 class="col">Komik</h3>
+                <a href="/create" class="col-2 btn btn-primary">Tambah Data</a>
+            </div>
 
             <table class="table table-striped table-hover my-5">
                 <thead class="thead-dark">

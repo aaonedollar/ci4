@@ -16,6 +16,10 @@
                             <h5 class="card-title"><?= $d['judul']; ?></h5>
                             <p class="card-text"><?= $d['penulis']; ?></p>
                             <p class="card-text"><small class="text-muted"><?= $d['penerbit']; ?></small></p>
+                            <a class="btn btn-warning" href="">Edit</a>
+                            <a class="btn btn-danger" href="">Delete</a>
+                            <br><br>
+                            <a href="/">Kembali ke daftar</a>
                         </div>
                     </div>
                 </div>
