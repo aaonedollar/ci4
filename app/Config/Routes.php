@@ -31,9 +31,12 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
-$routes->get('/komik/(:segment)', 'Home::detail/$1');
-$routes->get('/create', 'Home::create');
+$routes->get('/', 'Komik::index');
+
+$routes->get('/komik/(:segment)', 'Komik::detail/$1');
+
+$routes->get('/create', 'Komik::create');
+
 
 /**
  * --------------------------------------------------------------------

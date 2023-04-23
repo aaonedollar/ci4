@@ -8,8 +8,16 @@
 
             <div class="row d-flex justify-content-between">
                 <h3 class="col">Komik</h3>
-                <a href="/create" class="col-2 btn btn-primary">Tambah Data</a>
+                <a href="/create" class="col-lg-2 col btn btn-primary">Tambah Data</a>
             </div>
+
+            <?php if (session()->getFlashdata('pesan')) : ?>
+
+                <div class="alert alert-success" role="alert">
+                    <?php echo session()->getFlashdata('pesan'); ?>
+                </div>
+
+            <?php endif; ?>
 
             <table class="table table-striped table-hover my-5">
                 <thead class="thead-dark">

@@ -7,10 +7,13 @@
         <div class="col">
             <h2>Form Tambah Data</h2>
 
-            <form>
+            <form action="/komik/save" method="post">
+
+                <?php echo  csrf_field(); ?>
+
                 <div class="mb-3">
                     <label for="judul" class="form-label">Judul</label>
-                    <input type="text" class="form-control" id="judul" name="judul">
+                    <input type="text" class="form-control" id="judul" name="judul" autofocus>
                 </div>
                 <div class="mb-3">
                     <label for="penulis" class="form-label">Penulis</label>
@@ -27,7 +30,7 @@
                     <input type="text" class="form-control" id="sampul" name="sampul">
                 </div>
 
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Tambah Data</button>
             </form>
 
         </div>
